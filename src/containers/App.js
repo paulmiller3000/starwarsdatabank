@@ -31,10 +31,16 @@ class App extends Component {
     return !chars.length ?
       <h1>Loading</h1> :
       (
-        <div className="tc">
-          <h1 className='f1'>Star Wars Database</h1>
-          <SearchBox searchChange={this.onSearchChange} />
-          <StarshipCardList starships={filteredChar} />
+        <div>
+          <div id="stars3"></div>
+          <div id="stars3"></div>
+          <div id="stars3"></div>
+
+          <div className="tc">
+            <h1 className='f1'>Star Wars Databank</h1>
+            <SearchBox searchChange={this.onSearchChange} />
+            <StarshipCardList starships={filteredChar} />
+          </div>
         </div>
       );
   }
