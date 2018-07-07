@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({name, model, manufacturer}) => {
+const StarshipCard = ({name, model, manufacturer}) => {
 	return (
 		<div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
 			<div>
@@ -12,4 +12,4 @@ const Card = ({name, model, manufacturer}) => {
 	);
 }
 
-export default Card
+export default StarshipCard

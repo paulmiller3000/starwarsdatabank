@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import StarshipCard from './StarshipCard';
 
 const CardList = ({ starships }) => {
 	return (
@@ -7,7 +7,7 @@ const CardList = ({ starships }) => {
 		{
 			starships.map((starship, i) => {
 				return (
-					<Card
+					<StarshipCard
 						key={i}
 						name={starships[i].name}
 						model={starships[i].model}

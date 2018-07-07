@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardList from '../components/CardList';
+import StarshipCardList from '../components/StarshipCardList';
 import SearchBox from '../components/SearchBox';
 import './App.css';
 
@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      starships: [],
+      chars: [],
       searchfield: ''
     }
   }
@@ -15,7 +15,7 @@ class App extends Component {
   componentDidMount() {
     fetch('https://swapi.co/api/starships/')
       .then(response=> response.json())
-      .then(starships=> this.setState({starships}));
+      .then(returnedObj=> this.setState({chars: returnedObj.results}));
   }
 
   onSearchChange = (event) => {
@@ -23,18 +23,18 @@ class App extends Component {
   }
 
   render() {
-    const { starships, searchfield } = this.state;
-    const filteredStarships = starships.filter(starship => {
-      return starship.name.toLowerCase().includes(searchfield.toLowerCase());
+    const { chars, searchfield } = this.state;
+    const filteredChar = chars.filter(char => {
+      return char.name.toLowerCase().includes(searchfield.toLowerCase());
     })
 
-    return !starships.length ?
+    return !chars.length ?
       <h1>Loading</h1> :
       (
         <div className="tc">
           <h1 className='f1'>Star Wars Database</h1>
           <SearchBox searchChange={this.onSearchChange} />
-          <CardList starships={filteredStarships} />
+          <StarshipCardList starships={filteredChar} />
         </div>
       );
   }
