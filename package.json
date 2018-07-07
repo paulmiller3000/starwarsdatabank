@@ -2,13 +2,14 @@
   "name": "starwars",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {        
+  "dependencies": {
+    "hoek": "^5.0.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
     "tachyons": "^4.10.0"
   },
-  "scripts": {    
+  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
