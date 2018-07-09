@@ -7,4 +7,9 @@
 h1 {
   font-family: 'SEGA LOGO FONT';
   font-weight: 200;
-  color: #ffd700; }
+  color: #ffd700; 
+}
+
+h1 span { display: table; }
+
+
