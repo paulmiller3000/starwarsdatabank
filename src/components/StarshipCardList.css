@@ -1,0 +1,7 @@
+@media screen and (max-width: 600px) {
+  .card-list {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+  }
+}
