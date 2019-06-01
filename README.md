@@ -4,3 +4,7 @@ This is an exercise I completed while learning React. Enhancements are already i
 ## Acknowledgments
 
 * Andrei Neagoie for the fantastic Complete Web Developer course
+
+## TO-DO
+*Fix closing X (lost with upgraded dependencies)
+*Add items besides starships
